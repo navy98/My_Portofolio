@@ -47,16 +47,16 @@
     });
 
     /*------------------
-		Navigation
-	--------------------*/
+        Navigation
+    --------------------*/
     $(".mobile-menu").slicknav({
         prependTo: '#mobile-menu-wrap',
         allowParentLinks: true
     });
 
     /*------------------
-		Hero Slider
-	--------------------*/
+        Hero Slider
+    --------------------*/
     $('.hero__slider').owlCarousel({
         loop: true,
         dots: true,
@@ -160,10 +160,20 @@
     /*------------------
         Video Popup
     --------------------*/
-    $('.video-popup').magnificPopup({
-        type: 'iframe'
-    });
 
+
+
+    $(document).ready(function () {
+        $('.video-popup, .popup-vimeo, .popup-gmaps').magnificPopup({
+            disableOn: 700,
+            type: 'iframe',
+            mainClass: 'mfp-fade',
+            removalDelay: 160,
+            preloader: false,
+
+            fixedContentPos: false
+        });
+    });
     /*------------------
         Counter
     --------------------*/
